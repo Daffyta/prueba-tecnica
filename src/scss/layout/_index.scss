@@ -1,0 +1,44 @@
+// Layout Rules
+//
+// Layout styles can also be divided into major and minor styles based on
+// reuse. Major layout styles such as header and footer are traditionally
+// styled using ID selectors but take the time to think about the elements
+// that are common across all components of the page and use class selectors
+// where appropriate.
+
+header {
+  background-color: $color-secondary;
+  color: $color-primary;
+
+  .breadcrumb {
+    background-color: transparent;
+  }
+}
+
+#mens-wear {
+  img {
+    margin-top: 20px;
+    @include mq-min-max(tablet, laptop) {
+      margin-top: -130px;
+    }
+    @include mq-min(desktop) {
+      margin-top: -130px;
+    }
+  }
+  h3 {
+    margin-left: 8%;
+  }
+}
+
+footer {
+  background-color: $color-secondary;
+  color: $color-primary;
+  margin-top: 20px;
+  display: flex;
+  align-items: center;
+
+  p {
+    margin-top: 20px;
+    padding: 16px;
+  }
+}

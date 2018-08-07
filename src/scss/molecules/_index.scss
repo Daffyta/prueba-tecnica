@@ -1,0 +1,82 @@
+// Molecules
+//
+// In chemistry, molecules are groups of atoms bonded
+// together that resultantly take on new properties.
+// In interfaces, molecules are relatively simple groups of
+// UI elements functioning together as a unit. For example,
+// a form label, search input, and button can combine them
+// together to create a search form molecule.
+
+nav {
+  #navbarNav {
+    border-bottom: 1px $color-primary solid;
+  }
+
+  .nav-item {
+    margin-left: 30px;
+    font-weight: lighter;
+  }
+}
+
+header {
+  #marca {
+    h1 {
+      font-weight: bolder;
+      color: yellow;
+      border-bottom: 1px white dashed;
+      padding: 20px 30px;
+    }
+
+    p {
+      padding: 0 0 15px 30px;
+    }
+  }
+}
+
+.content-text {
+  background-color: $color-secondary;
+  @include mq-min-max(tablet, laptop) {
+    height: 478px;
+    background-color: $color-primary;
+    background-image: url("../assets/img/fondo-b.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+  }
+  @include mq-min(desktop) {
+    height: 478px;
+    background-image: url("../assets/img/fondo-b.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+  }
+
+  div {
+    p {
+      color: $color-primary;
+      margin-top: 5%;
+      padding: 5% 10%;
+      @include mq-min-max(tablet, laptop) {
+        padding: 5% 18%;
+      }
+      @include mq-min(desktop) {
+        padding: 5% 18%;
+      }
+    }
+
+    img {
+      width: 70%;
+      margin-left: 15%;
+      -webkit-box-shadow: 3px 12px 17px #bababa;
+      -moz-box-shadow: 3px 12px 17px #bababa;
+      @include mq-min-max(tablet, laptop) {
+        margin-left: 15%;
+        width: 70%;
+      }
+      @include mq-min(desktop) {
+        margin-left: 15%;
+        width: 70%;
+      }
+    }
+  }
+}
